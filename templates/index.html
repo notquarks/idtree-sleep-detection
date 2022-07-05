@@ -1,0 +1,117 @@
+{% extends "base.html" %} {% block content %}
+<form
+  name="form"
+  method="POST"
+  style="text-align: center"
+  class="flex flex-col w-full gap-10"
+>
+  <h1 class="font-medium text-3xl">Prediksi Stress</h1>
+  <div class="flex flex-row w-full gap-10">
+    <div class="grid h-full p-5 pb-8 flex-grow card bg-base-300 rounded-box">
+      <label class="label">
+        <span class="label-text">Snoring Range:</span>
+      </label>
+      <input
+        type="number"
+        name="snoring_range"
+        step="any"
+        placeholder="Enter in dB"
+        class="input input-bordered w-full max-w-xs"
+        required
+      />
+      <label class="label">
+        <span class="label-text">Respiration Rate:</span>
+      </label>
+      <input
+        type="number"
+        name="respiration_rate"
+        step="any"
+        placeholder="Enter respiration_rate"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+      <label class="label">
+        <span class="label-text">Temperature:</span>
+      </label>
+      <input
+        type="number"
+        name="temperature"
+        step="any"
+        placeholder="Enter in F"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+      <label class="label">
+        <span class="label-text">Limb Movement:</span>
+      </label>
+      <input
+        type="number"
+        name="limb_movement"
+        step="any"
+        placeholder="Enter Limb Movement"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+    </div>
+    <div class="divider divider-horizontal"></div>
+    <div class="grid h-full p-5 pb-8 flex-grow card bg-base-300 rounded-box">
+      <label class="label">
+        <span class="label-text">Blood Oxygen:</span>
+      </label>
+
+      <input
+        type="number"
+        name="blood_oxygen"
+        step="any"
+        placeholder="Enter blood_oxygen"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+
+      <label class="label">
+        <span class="label-text">REM:</span>
+      </label>
+
+      <input
+        type="number"
+        name="rem"
+        step="any"
+        placeholder="Enter REM"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+
+      <label class="label">
+        <span class="label-text">Sleep Hour:</span>
+      </label>
+      <input
+        type="number"
+        name="sleep_hour"
+        step="any"
+        placeholder="Enter Sleep Hour"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+
+      <label class="label">
+        <span class="label-text">Heart Rate:</span>
+      </label>
+
+      <input
+        type="number"
+        name="heart_rate"
+        step="any"
+        placeholder="Enter heart rate"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+    </div>
+  </div>
+  <div class="block">
+    <button value="Submit" class="btn w-64 rounded-full">Run</button>
+  </div>
+</form>
+<p style="text-align: center" class="card bg-base-300 rounded-box my-5 py-5">
+  Level Stress : {{ output }}
+</p>
+{% endblock %}
